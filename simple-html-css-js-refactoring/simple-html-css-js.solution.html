@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Solution | Simple HTML/CSS/JS Refactoring</title>
+    <style type="text/css">
+      p {
+         font-style: italic; 
+         color: black; }
+      
+      a {
+        color: blue;
+        text-decoration: underline; }
+      
+      #refactoring-steps { 
+        visibility: hidden; }
+      
+      ol em {
+        font-weight: bold;
+        color: blue; }
+        
+      .note {
+        color: aqua;
+        background: blue;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  
+  <body>
+      
+    <h1>Refactor Me!</h1>
+    
+    <p>This page is full of lots of violations of the DRY principle (Don't Repeat Yourself) along with a number of other violations of HTML markup best practices.</p>
+    
+    <p>Your goal is to refactor the HTML, CSS and JavaScript on this page so that you have:</p>
+    
+    <ol>
+      <li>a clear separation of concerns between HTML, CSS and JavaScript</li>
+    </ol>
+    
+    <a href="#" id="hint-toggler">Click Here to See Suggested Refactoring Path!</a>   
+    
+    <ol id="refactoring-steps">
+      <li>Refactor <em>inline styles</em> (into the head tag or an external stylesheet).</li>
+      <li>Refactor <em>duplication</em> that exists in the inline style attributes.</li>
+      <li>Refactor <em>markup</em> to use appropriate html elements.</li>
+      <li>Refactor <em>styles</em> to eliminate the property duplication.</li>
+      <li>Refactor <em>javascript</em> to eliminate inline click handler.</li>
+    </ol>
+    
+    <div class="note">
+      While there a number of tools available that can assist in making this refactoring easier I want to challenge you to do this refactor with nothing but your brain and a text editor.
+    </div>
+    
+    <script>    
+      var toggleHints = function(event) {        
+          if(list.style.visibility === 'hidden') {
+              list.style.visibility = 'visible';
+          } else {
+              list.style.visibility = 'hidden';
+          }
+      };
+
+      var link = document.getElementById('hint-toggler');
+      var list = document.getElementById('refactoring-steps');
+
+      link.addEventListener('click', toggleHints, false);
+    </script>
+  
+  </body>
+</html>

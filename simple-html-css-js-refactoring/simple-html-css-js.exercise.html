@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple HTML/CSS/JS Refactoring</title>
+  </head>
+  <body>
+  
+    <div id="largeBlackText" style="font-size: 32px; font-weight: 700;">Refactor Me!</div>
+    
+    <br/>
+  
+    <div id="blackItalicParagraphText1" style="font-style: italic; margin-bottom: 10px; color: black;">
+      This page is full of lots of violations of the DRY principle (Don't Repeat Yourself) along with a number of other violations of HTML markup best practices.
+    </div>
+
+    <div id="blackItalicParagraphText2" style="font-style: italic; margin-bottom: 10px; color: black;">
+      Your goal is to refactor the HTML, CSS and JavaScript on this page so that you have:
+      <pre>
+   1. a clear separation of concerns between HTML, CSS and JavaScript
+      </pre>
+    </div>
+
+    <div id="blueHiderLinkThing" style="color: blue; text-decoration: underline; cursor: pointer;"
+      onclick="
+      if(document.getElementById('list1').style.visibility === 'hidden') {
+          document.getElementById('list1').style.visibility = 'visible';
+      } else {
+          document.getElementById('list1').style.visibility = 'hidden';
+      }
+      ">Click Here to See Suggested Refactoring Path!
+    </div>
+
+    <br/>
+  
+    <div id="list1" style="visibility: hidden;">
+      <div id="listItem1" style="text-indent: 10px;">1. Refactor <div id="highlightedBlackText" style="font-weight: bold; color: blue; display: inline;">inline styles</div> (into the head tag or an external stylesheet).</div>
+      <div id="listItem2" style="text-indent: 10px;">2. Refactor <div id="highlightedBlackText" style="font-weight: bold; color: blue; display: inline;">duplication</div> that exists in the inline style tags.</div>
+      <div id="listItem3" style="text-indent: 10px;">3. Refactor <div id="highlightedBlackText" style="font-weight: bold; color: blue; display: inline;">markup</div> to use appropriate html elements.</div>
+      <div id="listItem3" style="text-indent: 10px;">4. Refactor <div id="highlightedBlackText" style="font-weight: bolder; color: blue; display: inline;">styles</div> to eliminate the property duplication.</div>
+      <div id="listItem5" style="text-indent: 10px;">5. Refactor <div id="highlightedBlackText" style="font-weight: bolder; color: blue; display: inline;">javascript</div> to eliminate inline click handler.</div>
+    </div>
+  
+    <br/>
+
+    <div id="note" style="color: aqua; background: blue; padding: 10px;">
+      While there a number of tools available that can assist in making this refactoring easier I want to challenge you to do this refactor with nothing but your brain and a text editor.
+    </div>
+  
+  </body>
+</html>
